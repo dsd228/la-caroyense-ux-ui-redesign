@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Estilos generales */
+        /* Estilos generales - Réplica exacta */
         * {
             margin: 0;
             padding: 0;
@@ -19,10 +19,11 @@
         :root {
             --color-primary: #6B1E2E;
             --color-secondary: #C9A45C;
-            --color-dark: #3C121C;
+            --color-dark: #1A0A0E;
             --color-light: #F8F5F0;
             --color-text: #2C1810;
             --color-text-light: #5D4037;
+            --color-border: #E0D6C9;
             --transition: all 0.3s ease;
         }
         
@@ -30,7 +31,7 @@
             font-family: 'Playfair Display', serif;
             color: var(--color-text);
             line-height: 1.6;
-            background-color: var(--color-light);
+            background-color: white;
             overflow-x: hidden;
         }
         
@@ -41,27 +42,27 @@
         }
         
         h1 {
-            font-size: 4.5rem;
+            font-size: 3.5rem;
             font-weight: 800;
             line-height: 1.1;
             letter-spacing: -0.5px;
         }
         
         h2 {
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
         }
         
         h3 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 600;
         }
         
         p {
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
-            line-height: 1.8;
+            line-height: 1.7;
         }
         
         a {
@@ -85,11 +86,11 @@
             display: inline-block;
             background-color: var(--color-primary);
             color: white;
-            padding: 16px 32px;
+            padding: 14px 28px;
             border-radius: 2px;
             font-family: 'Playfair Display', serif;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             border: none;
@@ -99,22 +100,20 @@
         }
         
         .btn:hover {
-            background-color: var(--color-secondary);
-            color: var(--color-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(107, 30, 46, 0.15);
-        }
-        
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--color-dark);
-            border: 2px solid var(--color-dark);
-        }
-        
-        .btn-secondary:hover {
             background-color: var(--color-dark);
             color: white;
-            border-color: var(--color-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-primary);
+            border: 2px solid var(--color-primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--color-primary);
+            color: white;
         }
         
         section {
@@ -122,20 +121,19 @@
         }
         
         .section-header {
-            text-align: center;
             margin-bottom: 60px;
         }
         
-        /* Header y navegación */
+        /* Header y navegación - Réplica Desktop 3 */
         header {
-            background-color: rgba(255, 255, 255, 0.95);
+            background-color: white;
             color: var(--color-dark);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-            padding: 15px 0;
+            padding: 20px 0;
         }
         
         .nav-container {
@@ -145,11 +143,9 @@
         }
         
         .logo {
-            font-size: 2.2rem;
+            font-size: 2rem;
             font-weight: 800;
             color: var(--color-dark);
-            display: flex;
-            align-items: center;
             letter-spacing: 1px;
         }
         
@@ -171,7 +167,7 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             position: relative;
         }
         
@@ -199,7 +195,7 @@
             cursor: pointer;
         }
         
-        /* Hero section - IDÉNTICO AL DISEÑO */
+        /* Hero section - RÉPLICA EXACTA Desktop 3.png */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
             color: white;
@@ -208,7 +204,6 @@
             align-items: center;
             text-align: center;
             margin-top: 0;
-            position: relative;
         }
         
         .hero-content {
@@ -216,108 +211,104 @@
             margin: 0 auto;
         }
         
-        .hero-content h1 {
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #f0f0f0;
+            letter-spacing: 3px;
+        }
+        
+        .hero-title {
             color: white;
-            font-size: 5rem;
-            margin-bottom: 30px;
+            font-size: 4.5rem;
+            margin-bottom: 50px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
             letter-spacing: 1px;
             line-height: 1.1;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 40px;
-            color: #f0f0f0;
-            letter-spacing: 3px;
+            font-weight: 800;
         }
         
         .hero-buttons {
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-top: 50px;
+            margin-top: 30px;
         }
         
         .hero-buttons .btn {
             min-width: 200px;
-            padding: 18px 35px;
-            font-size: 1.1rem;
+            padding: 16px 32px;
+            font-size: 1rem;
             letter-spacing: 2px;
         }
         
-        .hero-buttons .btn-secondary {
+        .hero-buttons .btn-outline {
             background-color: transparent;
             color: white;
             border: 2px solid white;
         }
         
-        .hero-buttons .btn-secondary:hover {
+        .hero-buttons .btn-outline:hover {
             background-color: white;
             color: var(--color-dark);
             border-color: white;
         }
         
-        /* Nuestros Vinos section - IDÉNTICO AL DISEÑO */
+        /* Nuestros Vinos section - RÉPLICA EXACTA Desktop 3.png */
         .wines-section {
             background-color: white;
         }
         
+        .wines-section .section-header {
+            text-align: center;
+        }
+        
+        .wines-section h2 {
+            color: var(--color-dark);
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
         .wines-section .section-header p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--color-text-light);
             max-width: 700px;
             margin: 0 auto;
         }
         
-        .wines-container {
+        .wines-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
             margin-top: 40px;
         }
         
-        .wine-card {
-            background-color: var(--color-light);
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            height: 100%;
-            display: flex;
-            flex-direction: column;
+        .wine-item {
+            text-align: center;
+            padding: 0 15px;
         }
         
-        .wine-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .wine-img {
-            height: 300px;
-            background-color: #ddd;
+        .wine-image {
+            height: 350px;
+            background-color: #f5f1ea;
             background-size: cover;
             background-position: center;
+            margin-bottom: 25px;
+            border-radius: 4px;
         }
         
-        .wine-content {
-            padding: 30px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .wine-content h3 {
+        .wine-item h3 {
             color: var(--color-primary);
             font-size: 1.8rem;
             margin-bottom: 15px;
         }
         
-        .wine-content p {
+        .wine-item p {
             color: var(--color-text-light);
             margin-bottom: 25px;
-            flex-grow: 1;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
         
         .wine-link {
@@ -325,75 +316,47 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             display: inline-block;
-            margin-top: auto;
-            position: relative;
             padding-bottom: 5px;
+            border-bottom: 2px solid var(--color-secondary);
         }
         
-        .wine-link:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--color-secondary);
-            transition: width 0.3s ease;
-        }
-        
-        .wine-link:hover:after {
-            width: 100%;
-        }
-        
-        /* Sobre Nosotros section - IDÉNTICO AL DISEÑO */
+        /* Sobre Nosotros section - RÉPLICA EXACTA Desktop 3.png */
         .about-section {
             background-color: var(--color-light);
-            position: relative;
-        }
-        
-        .about-section:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%236b1e2e' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-            opacity: 0.3;
+            padding: 120px 0;
         }
         
         .about-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             text-align: center;
             max-width: 900px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
         }
         
         .about-content h2 {
-            color: var(--color-primary);
-            font-size: 3.5rem;
-            margin-bottom: 20px;
+            color: var(--color-dark);
+            font-size: 2.8rem;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .history-title {
             color: var(--color-dark);
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 10px;
             font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .history-subtitle {
             color: var(--color-secondary);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 600;
             letter-spacing: 2px;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             text-transform: uppercase;
         }
         
@@ -402,10 +365,12 @@
             line-height: 1.8;
             color: var(--color-text);
             font-style: italic;
-            margin: 40px 0;
-            padding: 0 20px;
+            margin: 50px 0;
+            padding: 0 40px;
             position: relative;
             max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .quote:before, .quote:after {
@@ -415,16 +380,17 @@
             opacity: 0.5;
             position: absolute;
             font-family: serif;
+            line-height: 1;
         }
         
         .quote:before {
             top: -20px;
-            left: -10px;
+            left: 0;
         }
         
         .quote:after {
             bottom: -40px;
-            right: -10px;
+            right: 0;
         }
         
         .brand-name {
@@ -435,11 +401,567 @@
             margin-top: 40px;
         }
         
+        /* Página de Vinos - RÉPLICA EXACTA Desktop 4.png */
+        .wines-page {
+            background-color: white;
+            padding: 120px 0 80px;
+        }
+        
+        .wines-page-header {
+            margin-bottom: 50px;
+        }
+        
+        .wines-page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .wines-page-header p {
+            font-size: 1.2rem;
+            color: var(--color-text-light);
+            max-width: 800px;
+        }
+        
+        .wines-page-content {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 60px;
+        }
+        
+        .filters-sidebar {
+            padding-right: 30px;
+            border-right: 1px solid var(--color-border);
+        }
+        
+        .filters-sidebar h3 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: var(--color-dark);
+        }
+        
+        .filter-group {
+            margin-bottom: 40px;
+        }
+        
+        .filter-group ul {
+            list-style: none;
+        }
+        
+        .filter-group li {
+            margin-bottom: 10px;
+            color: var(--color-text-light);
+            font-size: 1rem;
+        }
+        
+        .wines-list {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+        
+        .wine-detail {
+            padding-bottom: 60px;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .wine-detail:last-child {
+            border-bottom: none;
+        }
+        
+        .wine-detail h3 {
+            color: var(--color-primary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .wine-detail p {
+            color: var(--color-text-light);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .wine-specs {
+            list-style: none;
+            margin: 25px 0;
+        }
+        
+        .wine-specs li {
+            margin-bottom: 8px;
+            color: var(--color-text-light);
+            display: flex;
+            align-items: center;
+        }
+        
+        .wine-specs li:before {
+            content: "•";
+            color: var(--color-secondary);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .unique-products {
+            margin-top: 80px;
+            padding-top: 60px;
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .unique-products h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+        }
+        
+        .unique-products p {
+            font-size: 1.2rem;
+            color: var(--color-text);
+            max-width: 800px;
+            line-height: 1.8;
+        }
+        
+        .product-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .product-image-item {
+            text-align: center;
+        }
+        
+        .product-image {
+            height: 250px;
+            background-color: #f5f1ea;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        
+        .product-image-item h4 {
+            color: var(--color-primary);
+            font-size: 1.3rem;
+        }
+        
+        /* Página Sobre Nosotros - RÉPLICA EXACTA Desktop 5.png */
+        .about-page {
+            background-color: var(--color-light);
+            padding: 120px 0 80px;
+        }
+        
+        .about-page-header {
+            margin-bottom: 60px;
+        }
+        
+        .about-page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+        }
+        
+        .about-page-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .about-history {
+            margin-bottom: 60px;
+        }
+        
+        .about-history h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--color-dark);
+        }
+        
+        .about-history p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--color-text);
+            margin-bottom: 30px;
+        }
+        
+        .philosophy-link {
+            display: inline-block;
+            margin-top: 30px;
+        }
+        
+        .tour-section {
+            margin-top: 80px;
+            padding-top: 60px;
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .tour-section h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--color-dark);
+        }
+        
+        .tour-section p {
+            font-size: 1.2rem;
+            color: var(--color-text);
+            margin-bottom: 30px;
+        }
+        
+        .tour-highlights {
+            list-style: none;
+            margin: 30px 0;
+        }
+        
+        .tour-highlights li {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            color: var(--color-text);
+            font-weight: 600;
+        }
+        
+        .tour-highlights li:before {
+            content: "›";
+            color: var(--color-secondary);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .virtual-tour-link {
+            display: inline-block;
+            margin-top: 30px;
+        }
+        
+        /* Página Filosofía - RÉPLICA EXACTA Desktop 6.png */
+        .philosophy-page {
+            background-color: white;
+            padding: 120px 0 80px;
+        }
+        
+        .philosophy-header {
+            margin-bottom: 60px;
+        }
+        
+        .philosophy-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--color-dark);
+        }
+        
+        .philosophy-header p {
+            font-size: 1.4rem;
+            color: var(--color-text);
+            font-style: italic;
+            max-width: 800px;
+        }
+        
+        .philosophy-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .philosophy-intro {
+            margin-bottom: 60px;
+        }
+        
+        .philosophy-intro p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--color-text);
+        }
+        
+        .philosophy-section {
+            margin-bottom: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .philosophy-section:last-child {
+            border-bottom: none;
+        }
+        
+        .philosophy-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--color-dark);
+        }
+        
+        .philosophy-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--color-text);
+            margin-bottom: 20px;
+        }
+        
+        .philosophy-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .philosophy-list li {
+            margin-bottom: 12px;
+            color: var(--color-text);
+            font-size: 1.1rem;
+        }
+        
+        .philosophy-list li:before {
+            content: "•";
+            color: var(--color-secondary);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        /* Página Turismo - RÉPLICA EXACTA Desktop 8.png */
+        .tourism-page {
+            background-color: var(--color-light);
+            padding: 120px 0 80px;
+        }
+        
+        .tourism-header {
+            margin-bottom: 60px;
+        }
+        
+        .tourism-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--color-dark);
+        }
+        
+        .tourism-header p {
+            font-size: 1.4rem;
+            color: var(--color-text);
+            font-style: italic;
+            max-width: 800px;
+        }
+        
+        .tourism-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+        
+        .tours-list {
+            list-style: none;
+        }
+        
+        .tour-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid var(--color-border);
+        }
+        
+        .tour-item:last-child {
+            border-bottom: none;
+        }
+        
+        .tour-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: var(--color-dark);
+        }
+        
+        .tour-item p {
+            color: var(--color-text-light);
+            margin-bottom: 15px;
+        }
+        
+        .experiences-section {
+            margin-top: 40px;
+        }
+        
+        .experiences-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--color-dark);
+        }
+        
+        .experiences-list {
+            list-style: none;
+        }
+        
+        .experiences-list li {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            color: var(--color-text);
+            font-weight: 600;
+        }
+        
+        .experiences-list li:before {
+            content: "›";
+            color: var(--color-secondary);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+        
+        .virtual-tour-section {
+            background-color: white;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .virtual-tour-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--color-dark);
+        }
+        
+        .virtual-tour-section p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--color-text);
+            margin-bottom: 20px;
+        }
+        
+        .virtual-tour-link {
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+        
+        .note {
+            font-style: italic;
+            color: var(--color-text-light);
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+        
+        .reserve-section {
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .hours-section {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--color-border);
+        }
+        
+        .hours-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--color-dark);
+        }
+        
+        /* Página Contacto - RÉPLICA EXACTA Desktop 9.png */
+        .contact-page {
+            background-color: white;
+            padding: 120px 0 80px;
+        }
+        
+        .contact-header {
+            margin-bottom: 60px;
+        }
+        
+        .contact-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--color-dark);
+        }
+        
+        .contact-header p {
+            font-size: 1.2rem;
+            color: var(--color-text);
+            max-width: 800px;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+        
+        .contact-info-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+        }
+        
+        .contact-info-section p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: 30px;
+        }
+        
+        .contact-details {
+            margin-bottom: 40px;
+        }
+        
+        .contact-detail {
+            margin-bottom: 25px;
+        }
+        
+        .contact-detail h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--color-dark);
+        }
+        
+        .contact-detail p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+        
+        .hours-info {
+            margin-top: 40px;
+        }
+        
+        .hours-info p {
+            font-size: 1.1rem;
+            color: var(--color-text);
+            margin-bottom: 10px;
+        }
+        
+        .note {
+            font-style: italic;
+            color: var(--color-text-light);
+            margin-top: 20px;
+            font-size: 1rem;
+        }
+        
+        .contact-form-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: var(--color-dark);
+        }
+        
+        .contact-form {
+            background-color: var(--color-light);
+            padding: 40px;
+            border-radius: 4px;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--color-dark);
+            font-size: 1rem;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            text-align: center;
+        }
+        
         /* Footer */
         footer {
             background-color: var(--color-dark);
             color: white;
             padding: 60px 0 30px;
+            margin-top: 80px;
         }
         
         .footer-content {
@@ -450,7 +972,7 @@
         }
         
         .footer-logo {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 800;
             color: white;
         }
@@ -467,28 +989,69 @@
             font-size: 0.9rem;
         }
         
+        /* Navegación entre páginas */
+        .page-navigation {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            background-color: white;
+            border-radius: 4px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+        
+        .page-nav-list {
+            list-style: none;
+        }
+        
+        .page-nav-list li {
+            margin-bottom: 15px;
+        }
+        
+        .page-nav-list a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: var(--color-text-light);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        .page-nav-list a i {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--color-primary);
+        }
+        
+        .page-nav-list a.active {
+            color: var(--color-primary);
+        }
+        
         /* Responsive */
         @media (max-width: 1200px) {
-            h1 {
-                font-size: 4rem;
-            }
-            
-            .hero-content h1 {
-                font-size: 4.2rem;
+            .container {
+                max-width: 1000px;
             }
         }
         
         @media (max-width: 992px) {
-            .wines-container {
-                grid-template-columns: repeat(2, 1fr);
+            .wines-grid, .wines-page-content, .tourism-content, .contact-content, .product-images {
+                grid-template-columns: 1fr;
             }
             
-            .hero-content h1 {
+            .filters-sidebar {
+                border-right: none;
+                border-bottom: 1px solid var(--color-border);
+                padding-bottom: 40px;
+                margin-bottom: 40px;
+            }
+            
+            .hero-title {
                 font-size: 3.5rem;
-            }
-            
-            .hero-subtitle {
-                font-size: 1.5rem;
             }
         }
         
@@ -524,80 +1087,62 @@
                 gap: 20px;
             }
             
-            .hero-content h1 {
+            .hero-title {
                 font-size: 2.8rem;
             }
             
             .hero-subtitle {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
             }
             
             h1 {
-                font-size: 3rem;
+                font-size: 2.8rem;
             }
             
             h2 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
             }
             
             section {
                 padding: 80px 0;
             }
             
-            .wines-container {
-                grid-template-columns: 1fr;
+            .wines-grid {
                 max-width: 500px;
                 margin-left: auto;
                 margin-right: auto;
             }
             
-            .about-content h2 {
-                font-size: 2.8rem;
-            }
-            
-            .history-title {
-                font-size: 2rem;
-            }
-            
-            .quote {
-                font-size: 1.2rem;
-            }
-            
-            .brand-name {
-                font-size: 2.5rem;
+            .page-navigation {
+                display: none;
             }
         }
         
         @media (max-width: 576px) {
-            .hero-content h1 {
+            .hero-title {
                 font-size: 2.2rem;
             }
             
             .hero-subtitle {
-                font-size: 1.1rem;
+                font-size: 1rem;
                 letter-spacing: 2px;
             }
             
             h1 {
-                font-size: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .about-content h2 {
                 font-size: 2.2rem;
             }
             
-            .brand-name {
-                font-size: 2rem;
+            h2 {
+                font-size: 1.8rem;
             }
             
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 30px;
+            .brand-name {
+                font-size: 2.2rem;
+            }
+            
+            .quote {
+                font-size: 1.2rem;
+                padding: 0 20px;
             }
         }
     </style>
@@ -606,7 +1151,7 @@
     <!-- Header y Navegación -->
     <header>
         <div class="container nav-container">
-            <a href="#" class="logo">
+            <a href="#home" class="logo">
                 BODEGA <span>LA CAROYENSE</span>
             </a>
             
@@ -615,72 +1160,78 @@
             </button>
             
             <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#vinos">Nuestros Vinos</a></li>
-                <li><a href="#nosotros">Sobre Nosotros</a></li>
-                <li><a href="#filosofia">Nuestra Filosofía</a></li>
-                <li><a href="#turismo">Turismo</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#wines-page">Vinos</a></li>
+                <li><a href="#about-page">Nosotros</a></li>
+                <li><a href="#philosophy-page">Filosofía</a></li>
+                <li><a href="#tourism-page">Turismo</a></li>
+                <li><a href="#contact-page">Contacto</a></li>
             </ul>
         </div>
     </header>
 
-    <!-- Hero Section - IDÉNTICO AL DISEÑO -->
-    <section class="hero" id="inicio">
+    <!-- Navegación entre páginas -->
+    <div class="page-navigation">
+        <ul class="page-nav-list">
+            <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#wines-page"><i class="fas fa-wine-bottle"></i> Vinos</a></li>
+            <li><a href="#about-page"><i class="fas fa-history"></i> Nosotros</a></li>
+            <li><a href="#philosophy-page"><i class="fas fa-leaf"></i> Filosofía</a></li>
+            <li><a href="#tourism-page"><i class="fas fa-map-marked-alt"></i> Turismo</a></li>
+            <li><a href="#contact-page"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+    </div>
+
+    <!-- PÁGINA HOME - RÉPLICA EXACTA Desktop 3.png -->
+    <section id="home" class="hero">
         <div class="container hero-content">
             <div class="hero-subtitle">Bienvenidos a</div>
-            <h1>BODEGA LA CAROYENSE</h1>
+            <h1 class="hero-title">BODEGA LA CAROYENSE</h1>
             <div class="hero-buttons">
-                <a href="#vinos" class="btn">Explorar vinos</a>
-                <a href="#turismo" class="btn btn-secondary">Visitas guiadas</a>
+                <a href="#wines-page" class="btn">Explorar vinos</a>
+                <a href="#tourism-page" class="btn btn-outline">Visitas guiadas</a>
             </div>
         </div>
     </section>
 
-    <!-- Nuestros Vinos Section - IDÉNTICO AL DISEÑO -->
-    <section class="wines-section" id="vinos">
+    <!-- Sección Nuestros Vinos - Home -->
+    <section class="wines-section">
         <div class="container">
             <div class="section-header">
                 <h2>Nuestros Vinos</h2>
                 <p>Selección de vinos elaborados con tradición y pasión</p>
             </div>
             
-            <div class="wines-container">
+            <div class="wines-grid">
                 <!-- Frambua Precoz -->
-                <div class="wine-card">
-                    <div class="wine-img" style="background-image: url('https://images.unsplash.com/photo-1566633808645-70280c0a28f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
-                    <div class="wine-content">
-                        <h3>Frambua Precoz</h3>
-                        <p>De cuerpo medio, con moderada tanicidad y buena acidez, y muy agradable.</p>
-                        <a href="#" class="wine-link">Ver más</a>
-                    </div>
+                <div class="wine-item">
+                    <div class="wine-image" style="background-image: url('https://images.unsplash.com/photo-1566633808645-70280c0a28f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <h3>Frambua Precoz</h3>
+                    <p>De cuerpo medio, con moderada tanicidad y buena acidez, y muy agradable.</p>
+                    <a href="#wines-page" class="wine-link">Ver más</a>
                 </div>
                 
                 <!-- Colonia -->
-                <div class="wine-card">
-                    <div class="wine-img" style="background-image: url('https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
-                    <div class="wine-content">
-                        <h3>Colonia</h3>
-                        <p>De aroma intenso, frutal, fresco y agradable.</p>
-                        <a href="#" class="wine-link">Ver más</a>
-                    </div>
+                <div class="wine-item">
+                    <div class="wine-image" style="background-image: url('https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <h3>Colonia</h3>
+                    <p>De aroma intenso, frutal, fresco y agradable.</p>
+                    <a href="#wines-page" class="wine-link">Ver más</a>
                 </div>
                 
                 <!-- Amabile -->
-                <div class="wine-card">
-                    <div class="wine-img" style="background-image: url('https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
-                    <div class="wine-content">
-                        <h3>Amabile</h3>
-                        <p>De aroma intenso y frutal, a frutillas maduras.</p>
-                        <a href="#" class="wine-link">Ver más</a>
-                    </div>
+                <div class="wine-item">
+                    <div class="wine-image" style="background-image: url('https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                    <h3>Amabile</h3>
+                    <p>De aroma intenso y frutal, a frutillas maduras.</p>
+                    <a href="#wines-page" class="wine-link">Ver más</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre Nosotros Section - IDÉNTICO AL DISEÑO -->
-    <section class="about-section" id="nosotros">
+    <!-- Sección Sobre Nosotros - Home -->
+    <section class="about-section" id="about-home">
         <div class="container">
             <div class="about-content">
                 <h2>Sobre Nosotros</h2>
@@ -692,6 +1243,306 @@
                 </div>
                 
                 <div class="brand-name">BODEGA LA CAROYENSE</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA DE VINOS - RÉPLICA EXACTA Desktop 4.png -->
+    <section id="wines-page" class="wines-page">
+        <div class="container">
+            <div class="wines-page-header">
+                <h1>Nuestros Vinos</h1>
+                <p>Selección de vinos elaborados con tradición y pasión.</p>
+            </div>
+            
+            <div class="wines-page-content">
+                <div class="filters-sidebar">
+                    <div class="filter-group">
+                        <h3>Filtrar por</h3>
+                        <ul>
+                            <li>Tipo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h3>Precio</h3>
+                        <ul>
+                            <li>Precio</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="wines-list">
+                    <!-- Frambua Precoz -->
+                    <div class="wine-detail">
+                        <h3>Frambua Precoz</h3>
+                        <p>De cuerpo medio, con moderada tanicidad y buena acidez, y muy agradable.</p>
+                        
+                        <ul class="wine-specs">
+                            <li>Elaborado con uvas 100% Isabella</li>
+                            <li>Tamaño 750cc</li>
+                            <li>Región Colonia Caroya</li>
+                        </ul>
+                        
+                        <a href="#" class="btn">Comprar ahora</a>
+                    </div>
+                    
+                    <!-- Colonia -->
+                    <div class="wine-detail">
+                        <h3>Colonia</h3>
+                        <p>De aroma intenso, frutal, fresco y agradable.</p>
+                        
+                        <ul class="wine-specs">
+                            <li>Elaborado con uvas -</li>
+                            <li>Tamaño 750cc</li>
+                            <li>Región Colonia Caroya</li>
+                        </ul>
+                        
+                        <a href="#" class="btn">Comprar ahora</a>
+                    </div>
+                    
+                    <!-- Amabile -->
+                    <div class="wine-detail">
+                        <h3>Amabile</h3>
+                        <p>De aroma intenso frutal, a frutillas maduras. Es dulce, suave y muy agradable al paladar.</p>
+                        
+                        <ul class="wine-specs">
+                            <li>Elaborado con uvas -</li>
+                            <li>Tamaño 750cc y 1425cc</li>
+                            <li>Región Colonia Caroya</li>
+                        </ul>
+                        
+                        <a href="#" class="btn">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="unique-products">
+                <h2>Productos únicos</h2>
+                <p>Desde 1930 y hasta la fecha seguimos llevando en lo alto a lo que nos caracterizó desde el comienzo "Hacer vinos de características únicas e incomparables".</p>
+                
+                <div class="product-images">
+                    <div class="product-image-item">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1566633808645-70280c0a28f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <h4>Frambua Precoz</h4>
+                    </div>
+                    
+                    <div class="product-image-item">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <h4>Colonia</h4>
+                    </div>
+                    
+                    <div class="product-image-item">
+                        <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1608270586620-248524c67de9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+                        <h4>Amabile</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA SOBRE NOSOTROS - RÉPLICA EXACTA Desktop 5.png -->
+    <section id="about-page" class="about-page">
+        <div class="container">
+            <div class="about-page-header">
+                <h1>Sobre Nosotros</h1>
+            </div>
+            
+            <div class="about-page-content">
+                <div class="about-history">
+                    <h2>NUESTRA HISTORIA</h2>
+                    <p>Desde 1930, en el corazón de Colonia Caroya, Bodega La Caroyense elabora vinos que reflejan la identidad de nuestra tierra y el legado de generaciones dedicadas a la vitivinicultura. Nuestra filosofía se basa en combinar la tradición familiar con la innovación constante, respetando los tiempos naturales de cada proceso y cuidando cada detalle, desde la vid hasta la copa. Trabajamos en armonía con el entorno, comprometidos con la calidad, la sostenibilidad y la comunidad que nos rodea, creando vinos que expresan historia, pasión y autenticidad.</p>
+                    
+                    <a href="#philosophy-page" class="btn philosophy-link">Conocé nuestra filosofía</a>
+                </div>
+                
+                <div class="tour-section">
+                    <h2>Un recorrido contado desde adentro</h2>
+                    <p>Acompáñanos junto a nuestra guía Ani a recorrer la historia, los espacios y el trabajo detrás de cada vino, con autenticidad.</p>
+                    
+                    <ul class="tour-highlights">
+                        <li>Cómo nació La Caroyense</li>
+                        <li>Zona de Destilería</li>
+                        <li>Zona de las Piletas (vasijas vinarias)</li>
+                    </ul>
+                    
+                    <a href="#tourism-page" class="btn virtual-tour-link">Recorrido Virtual</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA FILOSOFÍA - RÉPLICA EXACTA Desktop 6.png -->
+    <section id="philosophy-page" class="philosophy-page">
+        <div class="container">
+            <div class="philosophy-header">
+                <h1>NUESTRA FILOSOFÍA</h1>
+                <p>Tradición que perdura. Innovación que evoluciona.</p>
+            </div>
+            
+            <div class="philosophy-content">
+                <div class="philosophy-intro">
+                    <p>Desde 1930, en Bodega La Caroyense elaboramos vinos con una convicción clara: honrar nuestra historia mientras evolucionamos con el tiempo. Nuestra filosofía nace del trabajo constante, el respeto por la tierra y la pasión por crear vinos que expresen identidad y autenticidad. Somos una bodega con raíces profundas en Colonia Caroya, donde cada generación ha aportado conocimiento, dedicación y visión para seguir construyendo un legado vitivinícola sólido y reconocido.</p>
+                </div>
+                
+                <div class="philosophy-section">
+                    <h2>NUESTRA MANERA DE HACER VINO</h2>
+                    <p>Creemos en una vitivinicultura responsable, donde la calidad es el resultado de decisiones conscientes y procesos cuidados.</p>
+                    
+                    <ul class="philosophy-list">
+                        <li>Seleccionamos cuidadosamente nuestras uvas</li>
+                        <li>Respetamos los tiempos naturales de elaboración</li>
+                        <li>Combinamos técnicas tradicionales con innovación ecológica</li>
+                        <li>Buscamos el equilibrio entre sabor, aroma y carácter</li>
+                    </ul>
+                    
+                    <p>Cada vino es el reflejo de un trabajo artesanal, pensado para disfrutar y compartir.</p>
+                </div>
+                
+                <div class="philosophy-section">
+                    <h2>COMPROMISO CON LA TIERRA Y LA COMUNIDAD</h2>
+                    <p>Trabajamos en armonía con el entorno, cuidando nuestros viñedos y promoviendo prácticas sostenibles que respetan la naturaleza y preservan nuestros recursos para el futuro.</p>
+                    <p>Creemos en el valor de la comunidad y en el rol social de la bodega, generando vínculos duraderos y aportando al desarrollo local.</p>
+                </div>
+                
+                <div class="philosophy-section">
+                    <h2>UN LEGADO QUE CONTINÚA</h2>
+                    <p>Nuestra filosofía no es solo una forma de producir vino, sino una manera de entender el trabajo, la tradición y el futuro. Cada botella de Bodega La Caroyense encierra más de 90 años de historia, esfuerzo y pasión por lo que hacemos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA TURISMO - RÉPLICA EXACTA Desktop 8.png -->
+    <section id="tourism-page" class="tourism-page">
+        <div class="container">
+            <div class="tourism-header">
+                <h1>Turismo enológico en Bodega La Caroyense</h1>
+                <p>Experiencias únicas de historia, vino y sensaciones</p>
+            </div>
+            
+            <div class="tourism-content">
+                <div>
+                    <div class="tours-section">
+                        <h2>Reservá visita guiada</h2>
+                        
+                        <ul class="tours-list">
+                            <li class="tour-item">
+                                <h3>Visita guiada clásica</h3>
+                                <a href="#" class="btn">Más info</a>
+                            </li>
+                            
+                            <li class="tour-item">
+                                <h3>Degustación premium</h3>
+                                <a href="#" class="btn">Más info</a>
+                            </li>
+                            
+                            <li class="tour-item">
+                                <h3>Eso - Turismo</h3>
+                                <a href="#" class="btn">Más info</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="experiences-section">
+                        <h2>Lo que vas a vivir</h2>
+                        
+                        <ul class="experiences-list">
+                            <li>Historia y arquitectura</li>
+                            <li>Proceso y elaboración</li>
+                            <li>Degustación de vinos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="virtual-tour-section">
+                    <h2>Recorrido Virtual</h2>
+                    <p>Explorá bodega La Caroyense en 3D. Una primera mirada a nuestros espacios, historia y procesos de elaboración. Descubrí la ciencia de la bodega en éste recorrido virtual inmersivo y conoce por dentro nuestro legado vitivinícola.</p>
+                    
+                    <a href="https://tinyurl.com/5n6h0w7m" target="_blank" class="virtual-tour-link">https://tinyurl.com/5n6h0w7m</a>
+                    
+                    <p class="note">Esto es solo un breve adelanto, viví la experiencia en persona.</p>
+                    
+                    <div class="reserve-section">
+                        <a href="#contact-page" class="btn">Reservá visita guiada</a>
+                    </div>
+                    
+                    <div class="hours-section">
+                        <h2>Horarios y como llegar</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PÁGINA CONTACTO - RÉPLICA EXACTA Desktop 9.png -->
+    <section id="contact-page" class="contact-page">
+        <div class="container">
+            <div class="contact-header">
+                <h1>Bodega La Caroyense</h1>
+                <p>Contactanos</p>
+                <p>Estamos para ayudarte con reservas, compras y experiencias.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info-section">
+                    <h2>Contacto</h2>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <h3>Dirección</h3>
+                            <p>Av. San Martín 2281.<br>Colonia Caroya,<br>Córdoba, Argentina</p>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <h3>Telefonos</h3>
+                            <p>(03525) 466270<br>+549 3525 48-8150</p>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <h3>Correos</h3>
+                            <p>Dpto Turismo: turismolacaroyense@gmail.com<br>
+                            Dpto Administrativo: Infobodegalacaroyense@gmail.com<br>
+                            bodegalacaroyense2281@gmail.com<br>
+                            Dpto Ventas: ventasbodegalacaroyense@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="hours-info">
+                        <p><strong>De Lunes a Viernes de 9:00 a 18:30</strong><br>
+                        Sábados, Domingos y feriados de 10:00 a 18:30</p>
+                        
+                        <p><strong>De Lunes a Viernes de 8:00 a 20:00</strong><br>
+                        Sábados, Domingos y Feriados de 9:00 a 20:00</p>
+                        
+                        <p class="note">(Recordá que toda visita es con reserva previa)</p>
+                    </div>
+                </div>
+                
+                <div class="contact-form-section">
+                    <h2>Escríbinos</h2>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Correo</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn">Enviar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -725,11 +1576,24 @@
         });
         
         // Cerrar menú al hacer clic en un enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        document.querySelectorAll('.nav-links a, .page-nav-list a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                
+                // Actualizar navegación de páginas
+                document.querySelectorAll('.page-nav-list a').forEach(navLink => {
+                    navLink.classList.remove('active');
+                });
+                link.classList.add('active');
             });
+        });
+        
+        // Formulario de contacto
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Gracias por contactarnos! Te responderemos a la brevedad.');
+            this.reset();
         });
         
         // Smooth scrolling para enlaces internos
@@ -746,6 +1610,34 @@
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
+                }
+            });
+        });
+        
+        // Actualizar navegación de páginas al hacer scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const scrollPos = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.page-nav-list a').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                    
+                    // Actualizar también el menú principal si es una página principal
+                    if (['home', 'wines-page', 'about-page', 'philosophy-page', 'tourism-page', 'contact-page'].includes(sectionId)) {
+                        document.querySelectorAll('.nav-links a').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                    }
                 }
             });
         });
